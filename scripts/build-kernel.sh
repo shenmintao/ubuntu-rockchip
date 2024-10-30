@@ -27,6 +27,9 @@ fi
 cd linux-rockchip
 git checkout "${KERNEL_BRANCH}"
 
+b4 am -o patches 20241026100310.52679-1-honyuenkwun@gmail.com
+git am patches/20241026_honyuenkwun_arm64_dts_rockchip_add_orange_pi_5_max_board.mbx
+
 # shellcheck disable=SC2046
 export $(dpkg-architecture -aarm64)
 export CROSS_COMPILE=aarch64-linux-gnu-
